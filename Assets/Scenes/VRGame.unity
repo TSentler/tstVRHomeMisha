@@ -737,7 +737,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1344,7 +1344,7 @@ Transform:
   m_GameObject: {fileID: 247691917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.404, z: 0}
+  m_LocalPosition: {x: 0, y: 0.527, z: 0}
   m_LocalScale: {x: 0.6144843, y: 0.48110184, z: 0.5441893}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4193,7 +4193,7 @@ Transform:
   m_GameObject: {fileID: 995898495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 9.96, y: -0.59, z: 11.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9271,7 +9271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8469494145858465668, guid: 692f3b656548e2e4cb062a2e01e2b3cb, type: 3}
+  - {fileID: 2100000, guid: a687f2bf1d5ce8a4b91be4a315024065, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9820,6 +9820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6644671612952448201, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 424ed754185f59842b777fb3b4ee1412, type: 2}
     - target: {fileID: 8804502135794385337, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_Name
       value: Darts
