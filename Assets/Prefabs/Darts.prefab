@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 8804502135794385337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7311983, y: 3.5597496, z: -10.037339}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -354,4 +354,5 @@ MonoBehaviour:
     m_Bits: 4294967295
   minSpeed: 1.5
   maxAngle: 60
-  useFixedJoint: 0
+  useFixedJoint: 1
+  isStuck: 0

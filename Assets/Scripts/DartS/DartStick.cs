@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -29,7 +30,7 @@ public class DartStick : MonoBehaviour
     private FixedJoint joint;
     private Collider[] myColliders;
 
-    private bool isStuck;
+    public bool isStuck;
     private Vector3 lastVelocity;
     private Transform originalParent;
 
@@ -50,8 +51,18 @@ public class DartStick : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
-    void OnEnable() => grab.selectEntered.AddListener(OnGrabbed);
-    void OnDisable() => grab.selectEntered.RemoveListener(OnGrabbed);
+    void OnEnable()
+    {
+        grab.selectEntered.AddListener(OnGrabbed);   // ƒќ того, как XRI снимет слепок
+        grab.selectExited.AddListener(OnReleased);
+    }
+
+
+    void OnDisable()
+    {
+        grab.selectEntered.RemoveListener(OnGrabbed);
+        grab.selectExited.RemoveListener(OnReleased);
+    }
 
     void FixedUpdate()
     {
@@ -140,5 +151,12 @@ public class DartStick : MonoBehaviour
             }
         }
         ignoredColliders.Clear();
+    }
+
+
+    private void OnReleased(SelectExitEventArgs arg0)
+    {
+        // XRI мог восстановить кинематику из слепка Ч снимаем
+        rb.isKinematic = false;
     }
 }
