@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 247691917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3419e837753ef2e4ab7deb25f5c1f431, type: 3}
+  m_Script: {fileID: 11500000, guid: af778c3612ab97942b6fe5a01b22e633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnZoneDarts
   darts: {fileID: 8804502135794385337, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
@@ -5269,6 +5269,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6552891444284477012, guid: 7276d8e54b1ca504087d9205b1689ba7, type: 3}
   m_PrefabInstance: {fileID: 243369982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1212490960
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71762455
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6964302
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804502135794385337, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      propertyPath: m_Name
+      value: Darts (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6109076941741944865, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8804502135794385337, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1832978983}
+  m_SourcePrefab: {fileID: 100100000, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
 --- !u!1001 &1221330096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7619,6 +7680,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: cb6b7130-2bac-4ef7-abe4-6991ae7d419d
+--- !u!1 &1832978982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8804502135794385337, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
+  m_PrefabInstance: {fileID: 1212490960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1832978983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832978982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afa76d334825e144a68c48d5e2dd387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DartStickSimple2
+  minSpeed: 1.5
 --- !u!1001 &1836653531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9255,19 +9334,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.458
+      value: 2.5772443
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.732
+      value: -10.305058
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.71762455
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.6964302
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalRotation.y
@@ -9279,7 +9358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 88.283
       objectReference: {fileID: 0}
     - target: {fileID: 6222935330471830816, guid: dae5b72d8e4c5d442883cb46dd484502, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -9554,3 +9633,4 @@ SceneRoots:
   - {fileID: 3851965106141334682}
   - {fileID: 1895580504}
   - {fileID: 4753675728702388767}
+  - {fileID: 1212490960}
