@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 651532179438062759}
   - component: {fileID: 4012523569143804864}
   - component: {fileID: 2003094763302832825}
+  - component: {fileID: 6901308976326064946}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -174,3 +175,16 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6901308976326064946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538430529400814795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baed754f229f9aa49b56fbb21eeae12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  lifeTime: 5

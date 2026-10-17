@@ -4252,6 +4252,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2589822591085992932, guid: 9e34a95021acb6a43b3c07087d9b78ff, type: 3}
   m_PrefabInstance: {fileID: 448921893}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &984664472 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 1b010ed4b8d54dc4292c1491cd884ec4, type: 3}
+  m_PrefabInstance: {fileID: 270422744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &984664473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b010ed4b8d54dc4292c1491cd884ec4, type: 3}
@@ -6212,6 +6217,7 @@ GameObject:
   - component: {fileID: 1414564310}
   - component: {fileID: 1414564309}
   - component: {fileID: 1414564308}
+  - component: {fileID: 1414564312}
   m_Layer: 0
   m_Name: MonsterMan
   m_TagString: Untagged
@@ -6412,6 +6418,19 @@ Transform:
   - {fileID: 984664473}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414564312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414564307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80558d2cc377a94f907f1cac4c9d14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  animator: {fileID: 984664472}
 --- !u!114 &1424780044
 MonoBehaviour:
   m_ObjectHideFlags: 0
