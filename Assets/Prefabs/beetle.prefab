@@ -158,7 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VRCarSeat
   driverSeat: {fileID: 2028796172648180543}
   xrOrigin: {fileID: 0}
-  lockPlayerToCar: 1
 --- !u!1 &5604422682172410919
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +522,7 @@ Transform:
   m_GameObject: {fileID: 6326169729581747489}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0.019, z: -0.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -618,7 +617,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5819959395299642792}
-  - component: {fileID: 669333870640270039}
+  - component: {fileID: 4626900704948000225}
+  - component: {fileID: 560689658651404741}
+  - component: {fileID: 7858170748706031092}
   - component: {fileID: 5217694088617643368}
   m_Layer: 0
   m_Name: beetle
@@ -636,7 +637,7 @@ Transform:
   m_GameObject: {fileID: 6597622342497081106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65, y: -0.22, z: -2.75}
+  m_LocalPosition: {x: 5.045, y: -0.22, z: -2.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -645,9 +646,10 @@ Transform:
   - {fileID: 21667538525516440}
   - {fileID: 3049571570338566963}
   - {fileID: 247595280944618132}
+  - {fileID: 5596104739601200504}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &669333870640270039
+--- !u!114 &4626900704948000225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -656,16 +658,127 @@ MonoBehaviour:
   m_GameObject: {fileID: 6597622342497081106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e50f5b6b5adaf8f4c8a94494018c998c, type: 3}
+  m_Script: {fileID: 11500000, guid: f34c921d0ab146849a79354d96a5715e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleCarController
-  motorForce: 1500
-  maxSteerAngle: 30
-  brakeForce: 3000
-  frontLeftWheel: {fileID: 4513524793834583009}
-  frontRightWheel: {fileID: 3049571570338566963}
-  rearLeftWheel: {fileID: 21667538525516440}
-  rearRightWheel: {fileID: 247595280944618132}
+  m_EditorClassIdentifier: Assembly-CSharp::GripToggleInTrigger
+  gripAction: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  onFirstPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 560689658651404741}
+        m_TargetAssemblyTypeName: XRLocomotionSwitcher, Assembly-CSharp
+        m_MethodName: DisableAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7858170748706031092}
+        m_TargetAssemblyTypeName: GrokSimpleVRCarController, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5013224332416537508}
+        m_TargetAssemblyTypeName: VRCarSeat, Assembly-CSharp
+        m_MethodName: EnterCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onSecondPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 560689658651404741}
+        m_TargetAssemblyTypeName: XRLocomotionSwitcher, Assembly-CSharp
+        m_MethodName: EnableAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7858170748706031092}
+        m_TargetAssemblyTypeName: GrokSimpleVRCarController, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5013224332416537508}
+        m_TargetAssemblyTypeName: VRCarSeat, Assembly-CSharp
+        m_MethodName: ExitCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  resetOnExitTrigger: 1
+--- !u!114 &560689658651404741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6597622342497081106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bdfaeb14ef3af945aecb4b9b015f601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::XRLocomotionSwitcher
+  componentsToToggle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &7858170748706031092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6597622342497081106}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b978785ccb47943bc6d3ab74d36789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleVRCarController
+  rb: {fileID: 5217694088617643368}
+  turnStickAction: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  throttleStickAction: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  maxSpeed: 25
+  acceleration: 35
+  reverseAcceleration: 18
+  turnSpeed: 80
+  drag: 2.2
+  centerOfMassY: -0.6
 --- !u!54 &5217694088617643368
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -674,7 +787,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6597622342497081106}
   serializedVersion: 5
-  m_Mass: 50
+  m_Mass: 1500
   m_LinearDamping: 0.1
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -693,3 +806,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &7223989194073470569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5596104739601200504}
+  - component: {fileID: 1977799657499005558}
+  m_Layer: 0
+  m_Name: TriggerEnter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5596104739601200504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223989194073470569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5819959395299642792}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1977799657499005558
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223989194073470569}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

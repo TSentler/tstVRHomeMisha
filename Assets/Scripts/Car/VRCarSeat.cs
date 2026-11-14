@@ -5,12 +5,9 @@ public class VRCarSeat : MonoBehaviour
     public Transform driverSeat;   // пустой объект внутри машины (место водителя)
     public Transform xrOrigin;     // твой XR Origin (или Camera Offset)
 
-    [Header("Настройки")]
-    public bool lockPlayerToCar = true;
-
-    void Start()
+    public void EnterCar()
     {
-        if (lockPlayerToCar && driverSeat != null && xrOrigin != null)
+        if (driverSeat != null && xrOrigin != null)
         {
             // Перемещаем игрока в машину
             xrOrigin.SetParent(driverSeat);
@@ -25,6 +22,7 @@ public class VRCarSeat : MonoBehaviour
         if (xrOrigin != null)
         {
             xrOrigin.SetParent(null);
+            xrOrigin.localPosition += transform.right;
         }
     }
 }
