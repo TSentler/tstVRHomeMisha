@@ -11988,10 +11988,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 560689658651404741, guid: 40425f8d6ef506844b4ca79bfb0811df, type: 3}
-      propertyPath: componentsToToggle.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 560689658651404741, guid: 40425f8d6ef506844b4ca79bfb0811df, type: 3}
       propertyPath: 'componentsToToggle.Array.data[0]'
       value: 
       objectReference: {fileID: 1806115623}
